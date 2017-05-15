@@ -1,4 +1,4 @@
-package socketio;
+package socketio.bio;
 
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;

@@ -1,4 +1,4 @@
-package socketio;
+package socketio.bio;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,14 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class ServerAcceptor2 {
+/**
+*<b>ServerAcceptor2 本身也是可以充当处理服务器  只是考虑到客户端的请求并发，单线程的服务端承受压力的能力</b> 
+* @ClassName: ServerAcceptor2 
+* @author qinjiayan
+* @date 2017年5月10日 上午10:59:53 
+*
+ */
+public class ServerWithoutAcceptor {
 	
 	//默认的端口号  
     private static int DEFAULT_PORT = 12345;  

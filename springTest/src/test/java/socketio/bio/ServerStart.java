@@ -1,4 +1,4 @@
-package socketio;
+package socketio.bio;
 
 import java.io.IOException;
 
@@ -11,7 +11,8 @@ public class ServerStart {
             @Override  
             public void run() {  
                 try {  
-                	ServerAcceptor2.start();  
+                	ServerAcceptor.start();  
+                	//ServerWithoutAcceptor.start();  
                 } catch (IOException e) {  
                     e.printStackTrace();  
                 }  

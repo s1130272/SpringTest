@@ -1,4 +1,4 @@
-package socketio;
+package socketio.bio;
 
 import java.util.Random;
 
