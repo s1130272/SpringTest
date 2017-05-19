@@ -24,7 +24,7 @@ public class Client {
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));  
             out = new PrintWriter(socket.getOutputStream(),true);  
             out.println(expression);  
-            System.out.println("___结果为：" + in.readLine());  
+            System.out.println("___结果为：" + in.readLine()+"  socket: "+socket+"--"+socket.hashCode());  
         }catch(Exception e){  
             e.printStackTrace();  
         }finally{  
