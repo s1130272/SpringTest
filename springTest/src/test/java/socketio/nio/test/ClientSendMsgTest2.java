@@ -21,8 +21,9 @@ public class ClientSendMsgTest2 {
                     String expression = random.nextInt(10)+""+operators[random.nextInt(4)]+(random.nextInt(10)+1);  
                     try {
                     	System.out.println("---------------------------0----------------------");
-                    	clientTest.sendMsg(expression);
-                        Thread.currentThread().sleep(random.nextInt(5000));  
+                    	 Thread.currentThread().sleep(random.nextInt(5000)); 
+                    	 clientTest.sendMsg(expression);
+                        
                     } catch (InterruptedException e) {  
                         e.printStackTrace();  
                     } catch (Exception e) {

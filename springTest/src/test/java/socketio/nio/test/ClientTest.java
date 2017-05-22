@@ -25,7 +25,9 @@ public class ClientTest implements Runnable {
 			c_socketChannel_1.configureBlocking(false);//开启非阻塞模式  
 
 			if (c_socketChannel_1.connect(new InetSocketAddress("127.0.0.1", 12345))) {
+				System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 			} else {
+				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 				c_socketChannel_1.register(selector, SelectionKey.OP_CONNECT);
 			}
 			started = true;
@@ -43,6 +45,7 @@ public class ClientTest implements Runnable {
 							SocketChannel c_socketChannel_2 = (SocketChannel) key.channel();
 							// case1:
 							if (key.isConnectable()) {
+								//通过将套接字通道置于非阻塞模式，然后调用其 connect 方法来发起非阻塞连接操作。一旦建立了连接，或者尝试已失败，该套接字通道就变为可连接的，并且可调用此方法完成连接序列。如果连接操作失败，则调用此方法将导致抛出合适的 IOException。
 								if (c_socketChannel_2.finishConnect()) {
 								} else {
 									System.exit(1);
